@@ -1,0 +1,154 @@
+body {background-color: #D2B48C; /* tan */
+color: #592d01; /* dark brown */
+margin: 0;
+padding: 0;}
+
+h1 {font-family: "Alegreya", serif;
+color: #704510; /* medium brown */
+	margin-top: 50px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;}
+
+h2 {font-family: "Alegreya", serif;
+color: #704510; /* medium brown */
+	margin-top: 20px;
+	border-bottom: 1px solid #704510; /* medium brown */}
+
+p {font-family: "Alegreya", serif;
+	font-size: 120%;
+	margin-top: 20px;}
+
+p.clear {clear: both;}
+
+li {font-family: "Alegreya", serif;
+font-size: 110%;}
+
+td {font-family: "Alegreya", serif;
+vertical-align:top;
+font-size: 110%;}
+
+/* modified from: https://www.w3schools.com/css/css_link.asp and https://www.w3schools.com/css/tryit.asp?filename=trycss_link_advanced2*/
+a.button:link, a.button:visited {background-color: #222085; /* navy */
+	border: 1px solid #222085; /* navy */  /* adding border here even though invisible so size of button won't change on hover */
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;}
+
+a.button:hover, a.button:active {background-color: #f0dcbd; /* light beige */
+    color: #222085; /* navy */
+    border: 1px solid #222085; /* navy */ }
+
+a:active {color: white;}
+
+.categories {width:25%;}
+
+.clear {clear: both;}
+
+/* Highlight the nav link for the page you're currently on */
+.current {background-color: #6495ED; /* cornflower blue */
+    color:#fff !important; /* to override link state */}
+
+.dates {text-align: right;
+padding-right: 10px;
+width:20%;}
+
+.description {padding-bottom: 10px;
+padding-right: 50px;}
+
+.fl {float: left;}
+
+.footer {font-size: 90%;
+font-family: "Alegreya Sans", sans-serif;
+color: #704510;
+text-align: right;
+clear: both;}
+
+.inpagenav {list-style-type:none;
+padding-left: 0px;}
+
+.main {margin-top: -20px;
+margin-left: 15px;}
+
+/* nav code (including media calls) adapted from http://css-snippets.com/simple-horizontal-navigation/#code */
+.nav ul {list-style: none;
+  background-color: #f0dcbd; /* light beige */
+  text-align: left;
+  padding: 0;
+  margin: 0;}
+
+.nav li {font-family: "Alegreya Sans", sans-serif;
+font-size: 125%;
+  line-height: 40px;
+  height: 50px;
+  border-bottom: 1px solid #592d01;} /* dark brown */
+
+.nav a {text-decoration: none; /* remove underline on nav links */
+  color: #704510; /* medium brown */
+  display: block;} /* make area around text clickable */
+
+.nav a:hover {background-color: #D2B48C; /* tan */
+    color: #222085;}
+
+.nav a.current {background-color: #6495ED; /* cornflower blue */
+    color:#fff !important; /* to override link state */
+  cursor: default;}
+
+.overlay {color: white;
+padding: 20px 50px 10px 50px;}
+
+.overview {background-image: url("beach.jpg");
+height: 100vh; /* source: http://uxmilkshake.com/how-to-create-a-responsive-full-height-image-with-pure-css/ */
+background-repeat: no-repeat; /* source: https://www.w3schools.com/css/css_background.asp */
+background-size: cover; /* source: https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion */
+background-position: center; /* source: https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion */
+text-align: center;
+color: white;
+margin-left: -15px;} /* to offset the 15px left margin on .main so the image fills to the left edge */
+
+/* source: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp */
+.row::after {content: "";
+  clear: both;
+  display: table;}
+
+.sidebar {width: 324px;
+    border: 2px solid #222085;
+	background-color: #f0dcbd; /* light beige */
+	margin: 10px;
+    padding: 10px 25px 10px 25px;
+	float: left;}
+
+/* source for threecolumn styles: Denise Carroll */
+.threecolumn {float: left;
+  height: 250px;
+  width: 400px;
+  overflow: hidden;
+  padding: 5px;}
+
+.threecolumn img {height: auto;
+	width: 400px;}
+
+/* twocolumn styles adapted from threecolum styles (fix height instead of width based on differing image proportions in crafting section */
+.twocolumn {float: left;
+  height: 375px;
+  width: auto;
+  overflow: hidden;
+  padding: 5px;}
+
+.twocolumn img {height: 375px;
+  width: auto;}
+
+@media screen and (min-width: 600px) {
+	.nav a {padding: 20px 20px 20px 20px;}
+	.nav li {border-bottom: none;
+	  display: inline-block;
+	  line-height: 10px;}
+}
+
+@media (max-width: 600px) {
+	img {display: none;}
+    .nav ul {text-align: center;}
+   	.overlay {color: #592d01;}
+	.overview {background-image: none;}
+}
